@@ -1,3 +1,5 @@
+library(dplyr)
+setwd("C:/Users/ruch/Documents/Coursera/Course_3")
 # Read Activity Labels
 activity_labels <- read.table("C:/Users/ruch/Documents/Coursera/Course_3/UCI HAR Dataset/activity_labels.txt", header = FALSE)
 colnames(activity_labels)[1] = "Activity_ID"
@@ -39,3 +41,6 @@ final_data <- merge(combined_data, activity_labels, row.names = "Activity_ID")
 #Create additional table that calculates mean
 mean_agg_data <- aggregate(.~`Participant ID`+ Activity, final_data, mean, na.rm=TRUE)
 mean_agg_data <- arrange(mean_agg_data, `Participant ID`, Activity)
+
+#Write out mean data output
+write.table(mean_agg_data, "mean_cleansed_data.txt", row.names = FALSE)
