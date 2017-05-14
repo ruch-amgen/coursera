@@ -1,4 +1,4 @@
-#Getting and Cleansing Data
+# Getting and Cleansing Data
 ### This contains files for the "Getting and Cleansing Data" assignment.  It takes data files from the "Human Activity Recognition Using Smartphones Dataset" dataset and formats, structures, and cleanses the data in such a way, which can be cunsumable for data analysis.
 
 ## Files
